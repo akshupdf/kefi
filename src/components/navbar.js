@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from "../images/logo.png"
+import ham from "../images/download.png"
 import { Link } from 'react-scroll'
 
 export default function Navbar() {
@@ -14,16 +15,16 @@ export default function Navbar() {
   return (
 <div className='fixed top-0 w-full z-[10] backdrop-blur-2xl backdrop-opacity-5  '>
 
-<li className='w-[10%] sm:flex lg:hidden' onClick={handleShow}>Menu</li>
+<li className='w-[10%] sm:flex lg:hidden bg-white m-2 rounded-full right-0 fixed' onClick={handleShow}><img src={ham} className=''></img></li>
 
 {
-  show  && <div className='absolute  p-8 z-2'>
+  show  && <div className=' w-[30vh]  p-8 text-xl bg-white absolute right-0 top-12 rounded-xl nav'>
     <ul>
-    <li className='text-4xl '><img src={logo} alt="dish" className="lg:w-[22vh] sm:w-[10vh] lg:h-[17vh] pt-2 " /></li>
+    {/* <li className='text-4xl '><img src={logo} alt="dish" className="w-[30vh] lg:h-[17vh] pt-2 " /></li> */}
   
-    <li className=' bg-white rounded-2xl p-2 text-center h-14 mr-4'> <Link to="menu" smooth={true} offset={50} duration={500}>Menu</Link></li>
-            <li className=' bg-white rounded-2xl p-2 text-center h-14 mr-4'><Link to="about" smooth={true} offset={50} duration={500}>About Us</Link></li>
-            <li className=' bg-white rounded-2xl p-2 text-center h-14 mr-4'>Reach Out</li>
+    <li className=' bg-white rounded-2xl p-2 text-center h-14 m-2'> <Link to="menu" smooth={true} offset={50} duration={500}>Menu</Link></li>
+            <li className=' bg-white rounded-2xl p-2 text-center h-14 m-2'><Link to="about" smooth={true} offset={50} duration={500}>About Us</Link></li>
+            <li className=' bg-white rounded-2xl p-2 text-center h-14 m-2 z-4'>Reach Out</li>
     </ul>
     </div>
 }

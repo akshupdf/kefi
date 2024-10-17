@@ -127,11 +127,15 @@
 
     .dish{
       top : 30vh;
-      right : 0;  }
+      right : 0;
+      z-index: 9;
+    }
 
       .circle{
         top : 25vh ; 
         right : 0;
       }
+
+
     
   }
