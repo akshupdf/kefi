@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* Custom styles in index.css */
+.dish-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .slick-center .dish-image {
+    width: 250px;
+    height: 250px;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slick-slide:not(.slick-center) .dish-image {
+    opacity: 0.6;
+  }
+  
+  .grow-from-small {
+    transform: scale(0.7);
+  }
+
+
+  .slick-center .grow-from-small {
+    transform: scale(1);
+  }
+
+  .slick-next::before {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #ffffff;
+    background: linear-gradient(180deg, #febf24 0%, #ea4232 100%);
+  }
+
+
+.slick-prev::before {
+    width: 85px;
+    height: 85px;
+   font-size: 25px;
+    border-radius: 50%;
+    color: #ea4232;
+    color: #ffffff;
+    background: linear-gradient(180deg, #febf24 0%, #ea4232 100%);
+  }
+
+  
+
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .circle{
+    top : 20vh ; 
+    width : 70vh ; 
+    height : 70vh ; 
+    border-radius: 50%;
+     position: absolute ; 
+     right : 5vh;
+      z-index: 1;
+      transition: all 1s ease;
+      background-color: rgba(241, 187, 187, 0.822);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+  }
+  
+
+  .circle2{
+    top : 115vh ; 
+    width : 150vh ; 
+    height : 150vh ; 
+    border-radius: 50%;
+     position: absolute ; 
+     right : 20vh;
+      z-index: 1;
+      transition: all 1s ease;
+  }
+
+  .dish{
+    width: 60vh;
+    top : 24vh; 
+   z-index: 10;
+   position: absolute;
+   right : 5vh;
+   transition: all 1s ease;
+  }
+
+  .dish2{
+    width: 2vh ;
+    top : 130vh; 
+   z-index: -20;
+   position: absolute;
+   right : 35vh;
+   transition: all 1s ease;
+  }
+  
+
+
+  @media only screen and (max-width: 460px) {
+
+
+    .slick-prev::before {
+      display: none;
+    }
+
+    .slick-next{
+      display: none !important;
+    }
+
+
+
+      .circle2{
+      width : 80vh ; 
+    height : 80vh ; 
+    top : 115vh !important; 
+    }
+
+    .dish{
+      top : 30vh;
+      right : 0;  }
+
+      .circle{
+        top : 25vh ; 
+        right : 0;
+      }
+    
+  }
